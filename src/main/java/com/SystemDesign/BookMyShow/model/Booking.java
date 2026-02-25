@@ -15,16 +15,16 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 public class Booking extends BaseModel {
-    private Long number;
+    private String no;      // done
 
     @Enumerated(EnumType.ORDINAL)
     private BookingStatus bookingStatus;
 
     @ManyToOne
-    private User user;
+    private User user;  // done
 
     @ManyToOne
-    private Show show;
+    private Show show;  // done
 
     @ManyToMany
     private List<ShowSeat> showSeats;
@@ -32,13 +32,8 @@ public class Booking extends BaseModel {
     @ManyToOne
     private Screen screen;
 
-    @ManyToOne
-    private Theatre theatre;
-
-    @ManyToOne
-    private City city;
-
     private Payment payment;
+    private Long amount;
 }
 
 /*
